@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -d --name gitlab_runner_prod --restart unless-stopped -v "/data/docker/gitlab_runner_prod/config:/etc/gitlab-runner" -v "/var/run/docker.sock:/var/run/docker.sock" gitlab/gitlab-runner:latest

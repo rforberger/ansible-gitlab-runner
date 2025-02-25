@@ -1,0 +1,14 @@
+---
+dependencies: [rsync]
+
+galaxy_info:
+  role_name: gitlab-runner
+  author: ronnyforberger
+  description: A role to deploy GitLab Runner
+  company: ""
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+        - all

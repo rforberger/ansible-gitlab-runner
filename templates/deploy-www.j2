@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ -z "$@" ]]; then
+  exit 1
+fi
+
+for vhost in $@; do
+  mkdir -p /var/www/vhosts/$vhost && rsync -avr --verbose --exclude=.gitlab-ci.yml --exclude=.git . /var/www/vhosts/$vhost && chown -R www-data:www-data /var/www/vhosts/$vhost
+done
